@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    background: #0f0f0f;
+    color: white;
+    text-align: center;
+}
+
+header {
+    padding: 40px 20px;
+    background: linear-gradient(45deg, #ff5c93, #7a00ff);
+}
+
+header h1 {
+    font-size: 42px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+header p {
+    opacity: 0.8;
+    font-size: 16px;
+}
+
+.intro {
+    margin: 40px auto;
+    max-width: 600px;
+}
+
+.intro h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+.order-btn {
+    display: inline-block;
+    padding: 12px 20px;
+    margin-top: 20px;
+    background: #ff5c93;
+    border-radius: 8px;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.order-btn:hover {
+    background: #ff2e70;
+}
+
+.catalog {
+    margin-top: 50px;
+}
+
+.catalog h2 {
+    font-size: 26px;
+    margin-bottom: 30px;
+}
+
+.product-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 0 20px;
+}
+
+.product {
+    background: #1a1a1a;
+    padding: 20px;
+    width: 250px;
+    border-radius: 12px;
+    transition: 0.3s;
+    border: 1px solid #2a2a2a;
+}
+
+.product:hover {
+    transform: translateY(-5px);
+    border: 1px solid #ff5c93;
+}
+
+footer {
+    margin-top: 60px;
+    padding: 20px;
+    opacity: 0.6;
+    font-size: 14px;
+}

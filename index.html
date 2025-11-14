@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>dttastore • Digital Shop</title>
+  <style>
+    /* ==== GLOBAL ==== */
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: radial-gradient(circle at top, #2b0035, #0a0012);
+      color: white;
+      overflow-x: hidden;
+    }
+
+    h1, h2, h3 { font-weight: 700; }
+
+    /* ==== HERO SECTION ==== */
+    .hero {
+      text-align: center;
+      padding: 80px 20px;
+      animation: fadeIn 1.2s ease;
+    }
+    .title {
+      font-size: 48px;
+      letter-spacing: 1px;
+      background: linear-gradient(90deg, #ff4df0, #8c52ff);
+      background-clip: text;
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .subtitle {
+      margin-top: 10px;
+      font-size: 18px;
+      opacity: 0.8;
+    }
+    .instagram-btn {
+      margin-top: 30px;
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: linear-gradient(45deg, #ff4df0, #ff914d, #8c52ff);
+      padding: 12px 22px;
+      border-radius: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      color: white;
+      transition: 0.3s;
+    }
+    .instagram-btn:hover { transform: scale(1.05); filter: brightness(1.15); }
+
+    /* ==== PRODUCT GRID ==== */
+    .section-title {
+      margin-top: 40px;
+      text-align: center;
+      font-size: 30px;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 25px;
+      padding: 40px 20px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
+    .card {
+      background: rgba(255,255,255,0.06);
+      padding: 25px;
+      border-radius: 20px;
+      backdrop-filter: blur(6px);
+      text-align: center;
+      border: 1px solid rgba(255,255,255,0.1);
+      cursor: pointer;
+      transition: 0.3s;
+    }
+    .card:hover {
+      transform: translateY(-7px);
+      box-shadow: 0 0 18px #a855ff80;
+    }
+    .icon {
+      font-size: 36px;
+      margin-bottom: 10px;
+    }
+
+    /* ==== FOOTER ==== */
+    footer {
+      text-align: center;
+      padding: 25px;
+      margin-top: 40px;
+      opacity: 0.6;
+      font-size: 14px;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <section class="hero">
+    <h1 class="title">dttastore</h1>
+    <p class="subtitle">Your Digital Needs • IMVU • Premium Apps • AI Tools</p>
+    
+    <a href="https://instagram.com/dtta_vu" class="instagram-btn">
+      <span>📸</span> Contact via Instagram
+    </a>
+  </section>
+
+  <!-- PRODUCT GRID -->
+  <h2 class="section-title">Our Services</h2>
+  <div class="grid">
+
+    <div class="card">
+      <div class="icon">🎵</div>
+      <h3>Stream Musics & Video</h3>
+      <p>Spotify, Netflix, YouTube & more.</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🎨</div>
+      <h3>Editing Apps</h3>
+      <p>CapCut , Canva, Lightroom & others.</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🔥</div>
+      <h3>Mobile Legend Diamonds</h3>
+      <p>Top-up cepat & aman, all server.</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🤖</div>
+      <h3>AI Premium</h3>
+      <p>ChatGPT, Blackbox, Quilbot & more.</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">💰</div>
+      <h3>Robux</h3>
+      <p>Top-up Robux murah dan aman.</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">🏨</div>
+      <h3>Hotel Reservation</h3>
+      <p>Pemesanan hotel dengan harga terjangkau.</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">💻</div>
+      <h3>Website</h3>
+      <p>Gdrive, Freepik, Camscanner .</p>
+    </div>
+
+    <div class="card">
+      <div class="icon">📱</div>
+      <h3>Android Games</h3>
+      <p>Berbagai game Android premium.</p>
+    </div>
+
+  </div>
+
+  <footer>
+    © 2025 dttastore — Digital Lifestyle Store
+  </footer>
+
+</body>
+</html>
