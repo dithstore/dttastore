@@ -4,102 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>dttastore • Digital Shop</title>
-  <style>
-    /* ==== GLOBAL ==== */
-    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-    body {
-      font-family: 'Poppins', sans-serif;
-      background: radial-gradient(circle at top, #2b0035, #0a0012);
-      color: white;
-      overflow-x: hidden;
-    }
-
-    h1, h2, h3 { font-weight: 700; }
-
-    /* ==== HERO SECTION ==== */
-    .hero {
-      text-align: center;
-      padding: 80px 20px;
-      animation: fadeIn 1.2s ease;
-    }
-    .title {
-      font-size: 48px;
-      letter-spacing: 1px;
-      background: linear-gradient(90deg, #ff4df0, #8c52ff);
-      background-clip: text;
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-    .subtitle {
-      margin-top: 10px;
-      font-size: 18px;
-      opacity: 0.8;
-    }
-    .instagram-btn {
-      margin-top: 30px;
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      background: linear-gradient(45deg, #ff4df0, #ff914d, #8c52ff);
-      padding: 12px 22px;
-      border-radius: 14px;
-      font-weight: 600;
-      text-decoration: none;
-      color: white;
-      transition: 0.3s;
-    }
-    .instagram-btn:hover { transform: scale(1.05); filter: brightness(1.15); }
-
-    /* ==== PRODUCT GRID ==== */
-    .section-title {
-      margin-top: 40px;
-      text-align: center;
-      font-size: 30px;
-    }
-
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-      gap: 25px;
-      padding: 40px 20px;
-      max-width: 1100px;
-      margin: auto;
-    }
-
-    .card {
-      background: rgba(255,255,255,0.06);
-      padding: 25px;
-      border-radius: 20px;
-      backdrop-filter: blur(6px);
-      text-align: center;
-      border: 1px solid rgba(255,255,255,0.1);
-      cursor: pointer;
-      transition: 0.3s;
-    }
-    .card:hover {
-      transform: translateY(-7px);
-      box-shadow: 0 0 18px #a855ff80;
-    }
-    .icon {
-      font-size: 36px;
-      margin-bottom: 10px;
-    }
-
-    /* ==== FOOTER ==== */
-    footer {
-      text-align: center;
-      padding: 25px;
-      margin-top: 40px;
-      opacity: 0.6;
-      font-size: 14px;
-    }
-
-    @keyframes fadeIn {
-      from { opacity: 0; transform: translateY(20px); }
-      to { opacity: 1; transform: translateY(0); }
-    }
-  </style>
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
@@ -117,47 +22,365 @@
   <h2 class="section-title">Our Services</h2>
   <div class="grid">
 
-    <div class="card">
+    <div class="card" id="musicCard">
       <div class="icon">🎵</div>
       <h3>Stream Musics & Video</h3>
       <p>Spotify, Netflix, YouTube & more.</p>
     </div>
-
-    <div class="card">
+    
+    <div class="card" id="editingCard">
       <div class="icon">🎨</div>
       <h3>Editing Apps</h3>
       <p>CapCut , Canva, Lightroom & others.</p>
     </div>
 
-    <div class="card">
+    <div class="card" id="mlCard">
       <div class="icon">🔥</div>
       <h3>Mobile Legend Diamonds</h3>
       <p>Top-up cepat & aman, all server.</p>
     </div>
 
-    <div class="card">
+    <div class="card" id="aiCard">
       <div class="icon">🤖</div>
       <h3>AI Premium</h3>
       <p>ChatGPT, Blackbox, Quilbot & more.</p>
     </div>
 
-    <div class="card">
+    <div class="card" id="RobuxCard">
       <div class="icon">💰</div>
       <h3>Robux</h3>
       <p>Top-up Robux murah dan aman.</p>
     </div>
 
-    <div class="card">
+    <div class="card" id="HotelCard">
       <div class="icon">🏨</div>
       <h3>Hotel Reservation</h3>
       <p>Pemesanan hotel dengan harga terjangkau.</p>
     </div>
-
   </div>
 
-  <footer>
-    © 2025 dttastore — Digital Lifestyle Store
+  <!-- FOOTER -->
+  <footer class="footer">
+    <p>&copy; 2025 dttastore. All rights reserved.</p>
   </footer>
+
+  <!-- MODAL POPUP FOR STREAMING SERVICES -->
+  <div class="modal" id="musicModal">
+    <div class="modal-content">
+      <span class="close-btn" id="closemusicModal">&times;</span>
+      
+      <!-- YouTube Premium -->
+        <div class="service-section">
+        <div class="modal-header">
+          <h2>YouTube Premium</h2>
+          <p>Choose your subscription plan</p>
+        </div>
+        <div class="price-list">
+          <div class="price-item">
+            <div class="plan-details">
+              <div class="plan-name">1 Month Subscription</div>
+              <div class="plan-type">Email Customer</div>
+            </div>
+            <div class="price">Rp 12,000</div>
+          </div>
+          <div class="price-item">
+            <div class="plan-details">
+              <div class="plan-name">3 Month Subscription</div>
+              <div class="plan-type">Email Customer</div>
+            </div>
+            <div class="price">Rp 30,000</div>
+          </div>
+          <div class="price-item">
+            <div class="plan-details">
+              <div class="plan-name">1 Month Subscription</div>
+              <div class="plan-type">Admin Email</div>
+            </div>
+            <div class="price">Rp 16,000</div>
+          </div>
+          <div class="price-item">
+            <div class="plan-details">
+              <div class="plan-name">3 Month Subscription</div>
+              <div class="plan-type">Admin Email</div>
+            </div>
+            <div class="price">Rp 45,000</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Spotify -->
+      <div class="service-section">
+        <div class="modal-header">
+          <h2>Spotify Premium</h2>
+          <p>Unlimited music streaming</p>
+        </div>
+        <div class="price-list">
+          <div class="price-item">
+            <div class="plan-details">
+              <div class="plan-name">1 Month</div>
+              <div class="plan-type">Personal Email</div>
+            </div>
+            <div class="price">Rp 38,000</div>
+          </div>
+          <div class="price-item">
+            <div class="plan-details">
+              <div class="plan-name">2 Months</div>
+              <div class="plan-type">Personal Email</div>
+            </div>
+            <div class="price">Rp 68,000</div>
+          </div>
+          <div class="price-item">
+            <div class="plan-details">
+              <div class="plan-name">3 Months</div>
+              <div class="plan-type">Personal Email</div>
+            </div>
+            <div class="price">Rp 85,000</div>
+          </div>
+
+          <div class="price-item">
+            <div class="plan-details">
+              <div class="plan-name">1 Month</div>
+              <div class="plan-type">Admin Email</div>
+            </div>
+            <div class="price">Rp 35,000</div>
+          </div>
+          <div class="price-item">
+            <div class="plan-details">
+              <div class="plan-name">2 Months</div>
+              <div class="plan-type">Admin Email</div>
+            </div>
+            <div class="price">Rp 65,000</div>
+          </div>
+          <div class="price-item">
+            <div class="plan-details">
+              <div class="plan-name">3 Months</div>
+              <div class="plan-type">Admin Email</div>
+            </div>
+            <div class="price">Rp 85,000</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Netflix -->
+      <div class="service-section">
+        <div class="modal-header">
+          <h2>Netflix</h2>
+          <p>HD Streaming Plans</p>
+        </div>
+        <div class="price-list">
+          <div class="price-item">
+            <div class="plan-details">
+              <div class="plan-name">1 Month</div>
+              <div class="plan-type">Private 28-30 days</div>
+            </div>
+            <div class="price">Rp 35,000</div>
+          </div>
+          <div class="price-item">
+            <div class="plan-details">
+              <div class="plan-name">1 Month</div>
+              <div class="plan-type">Sharing 28-30 days</div>
+            </div>
+            <div class="price">Rp 30,000</div>
+          </div>
+          <div class="price-item">
+            <div class="plan-details">
+              <div class="plan-name">3 Months</div>
+              <div class="plan-type">Private 84-90 days</div>
+            </div>
+            <div class="price">Rp 90,000</div>
+          </div>
+          <div class="price-item">
+            <div class="plan-details">
+              <div class="plan-name">6 Months</div>
+              <div class="plan-type">Sharing 84-90 days</div>
+            </div>
+            <div class="price">Rp 75,000</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- VIU -->
+      <div class="service-section">
+        <div class="modal-header">
+          <h2>VIU Premium</h2>
+          <p>Korean Drama & Asian Content</p>
+        </div>
+        <div class="price-list">
+          <div class="price-item">
+            <div class="plan-details">
+              <div class="plan-name">1 Month</div>
+              <div class="plan-type">Private</div>
+            </div>
+            <div class="price">Rp 10,000</div>
+          </div>
+          <div class="price-item">
+            <div class="plan-details">
+              <div class="plan-name">3 Months</div>
+              <div class="plan-type">Private</div>
+            </div>
+            <div class="price">Rp 15,000</div>
+          </div>
+          <div class="price-item">
+            <div class="plan-details">
+              <div class="plan-name">1 Year</div>
+              <div class="plan-type">Private</div>
+            </div>
+            <div class="price">Rp 25,000</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- WeTV -->
+      <div class="service-section">
+        <div class="modal-header">
+          <h2>WeTV (Tencent Video)</h2>
+          <p>Chinese Drama & Entertainment</p>
+        </div>
+        <div class="price-list">
+          <div class="price-item">
+            <div class="plan-details">
+              <div class="plan-name">1 Month</div>
+              <div class="plan-type">Sharing</div>
+            </div>
+            <div class="price">Rp 12,000</div>
+          </div>
+          <div class="price-item">
+            <div class="plan-details">
+              <div class="plan-name">1 Month</div>
+              <div class="plan-type">Private</div>
+            </div>
+            <div class="price">Rp 36,000</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Disney+ Hotstar -->
+      <div class="service-section">
+        <div class="modal-header">
+          <h2>Disney+ Hotstar</h2>
+          <p>Movies, Series & Sports</p>
+        </div>
+        <div class="price-list">
+          <div class="price-item">
+            <div class="plan-details">
+              <div class="plan-name">1 Month</div>
+              <div class="plan-type">28-30 days</div>
+            </div>
+            <div class="price">Rp 30,000</div>
+          </div>
+          <div class="price-item">
+            <div class="plan-details">
+              <div class="plan-name">3 Months</div>
+              <div class="plan-type">84-90 days</div>
+            </div>
+            <div class="price">Rp 90.000</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+      
+  <!-- MODAL POPUP FOR EDITING SERVICES -->
+  <div class="modal" id="editingModal">
+    <div class="modal-content">
+      <span class="close-btn" id="closeeditingModal">&times;</span>
+      
+      <!-- CapCut -->
+      <div class="service-section">
+        <div class="modal-header">
+          <h2>CapCut Premium</h2>
+          <p>Advanced video editing features</p>
+        </div>
+        <div class="price-list">
+          <div class="price-item">
+            <div class="plan-details">
+              <div class="plan-name">1 Month</div>
+              <div class="plan-type">Pro Features</div>
+            </div>
+            <div class="price">Rp 15,000</div>
+          </div>
+          <div class="price-item">
+            <div class="plan-details">
+              <div class="plan-name">3 Months</div>
+              <div class="plan-type">Pro Features</div>
+            </div>
+            <div class="price">Rp 40,000</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Canva -->
+      <div class="service-section">
+        <div class="modal-header">
+          <h2>Canva Pro</h2>
+          <p>Premium design assets</p>
+        </div>
+        <div class="price-list">
+          <div class="price-item">
+            <div class="plan-details">
+              <div class="plan-name">1 Month</div>
+              <div class="plan-type">Team Account</div>
+            </div>
+            <div class="price">Rp 20,000</div>
+          </div>
+          <div class="price-item">
+            <div class="plan-details">
+              <div class="plan-name">6 Months</div>
+              <div class="plan-type">Team Account</div>
+            </div>
+            <div class="price">Rp 100,000</div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Lightroom -->
+      <div class="service-section">
+        <div class="modal-header">
+          <h2>Adobe Lightroom</h2>
+          <p>Professional photo editing</p>
+        </div>
+        <div class="price-list">
+          <div class="price-item">
+            <div class="plan-details">
+              <div class="plan-name">1 Month</div>
+              <div class="plan-type">Premium Plan</div>
+            </div>
+            <div class="price">Rp 25,000</div>
+          </div>
+          <div class="price-item">
+            <div class="plan-details">
+              <div class="plan-name">3 Months</div>
+              <div class="plan-type">Premium Plan</div>
+            </div>
+            <div class="price">Rp 65,000</div>
+          </div>
+
+      <!-- Meitu -->
+      <div class="service-section">
+        <div class="modal-header">
+          <h2>Meitu</h2>
+          <p>Professional photo editing</p>
+        </div>
+        <div class="price-list">
+          <div class="price-item">
+            <div class="plan-details">
+              <div class="plan-name">1 Month</div>
+              <div class="plan-type">Premium Plan</div>
+            </div>
+            <div class="price">Rp 25,000</div>
+          </div>
+          <div class="price-item">
+            <div class="plan-details">
+              <div class="plan-name">3 Months</div>
+              <div class="plan-type">Premium Plan</div>
+            </div>
+            <div class="price">Rp 65,000</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+ 
+<script src="script.js"></script>
 
 </body>
 </html>
