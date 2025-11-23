@@ -36,6 +36,9 @@ function setupModal(cardId, modalId, closeBtnId) {
 // Setup all modals - PASTIKAN ID SESUAI DENGAN HTML
 setupModal('musicCard', 'musicModal', 'closemusicModal');    
 setupModal('editingCard', 'editingModal', 'closeeditingModal');
+setupModal('mlCard', 'mlModal', 'closemlModal');
+setupModal('pubgCard', 'pubgModal', 'closepubgModal');
+setupModal('freefireCard', 'freefireModal', 'closefreefireModal');
 
 // Escape key closes all modals
 document.addEventListener('keydown', (event) => {
