@@ -41,7 +41,6 @@ setupModal('pubgCard', 'pubgModal', 'closepubgModal');
 setupModal('freefireCard', 'freefireModal', 'closefreefireModal');
 setupModal('RobuxCard', 'RobuxModal', 'closeRobuxModal');
 setupModal('imvuCard', 'imvuModal', 'closeimvuModal');
-setupModal('HotelCard', 'HotelModal', 'closeHotelModal');
 
 // Escape key closes all modals
 document.addEventListener('keydown', (event) => {
