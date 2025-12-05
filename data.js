@@ -183,7 +183,7 @@ const dttastoreData = {
         {
           name: 'ROBUX',
           items: [
-            { name: '500 robux', desc: 'Regular', price: 'Rp 85.000' },
+            { name: '500 robux', desc: 'Regular', price: 'Rp 80.000' },
             { name: '1.000 robux', desc: 'Regular', price: 'Rp 160.000' },
             { name: '1.500 robux', desc: 'Regular', price: 'Rp 235.000' },
             { name: '2.000 robux', desc: 'Regular', price: 'Rp 320.000' },
