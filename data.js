@@ -177,14 +177,15 @@ const dttastoreData = {
     // ROBLOX MODAL - LENGKAP!
     RobuxModal: {
       title: 'ROBLOX',
-      subtitle: 'Proses via login • Aman & Legal • 5-15 menit',
+      subtitle: 'Proses via login • Aman & Legal • 5-60 menit max 2 jam • Sesuai antrian',
       type: 'tabs',
       tabs: [
         {
           name: 'ROBUX',
           items: [
-            { name: '500 robux', desc: 'Regular', price: 'Rp 80.000' },
-            { name: '1.000 robux', desc: 'Regular', price: 'Rp 155.000' },
+            { name: '80 robux', desc: 'Regular', price: 'Rp 20.000' },
+            { name: '500 robux', desc: 'Regular', price: 'Rp 85.000' },
+            { name: '1.000 robux', desc: 'Regular', price: 'Rp 160.000' },
             { name: '1.500 robux', desc: 'Regular', price: 'Rp 230.000' },
             { name: '2.000 robux', desc: 'Regular', price: 'Rp 305.000' },
             { name: '3.000 robux', desc: 'Regular', price: 'Rp 435.000' },
@@ -225,9 +226,17 @@ const dttastoreData = {
         {
           name: 'PREMIUM',
           items: [
-            { name: 'PREMIUM 450 robux', desc: 'Paket Premium', price: 'Rp 80.000' },
-            { name: 'PREMIUM 1000 robux', desc: 'Paket Premium', price: 'Rp 150.000' },
+            { name: 'PREMIUM 450 robux', desc: 'Paket Premium', price: 'Rp 85.000' },
+            { name: 'PREMIUM 1000 robux', desc: 'Paket Premium', price: 'Rp 160.000' },
+            { name: 'PREMIUM 1350 robux', desc: 'Paket Premium', price: 'Rp 230.000' },
             { name: 'PREMIUM 2200 robux', desc: 'Paket Premium', price: 'Rp 300.000' },
+            { name: 'PREMIUM 2750 robux', desc: 'Paket Premium', price: 'Rp 370.000' },
+            { name: 'PREMIUM 3300 robux', desc: 'Paket Premium', price: 'Rp 450.000' },
+            { name: 'PREMIUM 3850 robux', desc: 'Paket Premium', price: 'Rp 520.000' },
+            { name: 'PREMIUM 4200 robux', desc: 'Paket Premium', price: 'Rp 600.000' },
+            { name: 'PREMIUM 4950 robux', desc: 'Paket Premium', price: 'Rp 670.000' },
+            { name: 'PREMIUM 5500 robux', desc: 'Paket Premium', price: 'Rp 740.0000'},
+            { name: 'PREMIUM 15.000 robux', desc: 'Paket Premium', price: 'Rp 1.450.000'},
           ]
         }
       ],
