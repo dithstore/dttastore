@@ -1,36 +1,44 @@
-/* ==== GLOBAL ==== */
+/* ==== GLOBAL STYLES ==== */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
-* { margin: 0; padding: 0; box-sizing: border-box; }
+
+* { 
+  margin: 0; 
+  padding: 0; 
+  box-sizing: border-box; 
+}
+
 body {
   font-family: 'Poppins', sans-serif;
   background: radial-gradient(circle at top, #3c3496, #0a0012);
   color: white;
+  min-height: 100vh;
   overflow-x: hidden;
 }
-
-h1, h2, h3 { font-weight: 700; }
 
 /* ==== HERO SECTION ==== */
 .hero {
   text-align: center;
-  padding: 80px 20px;
+  padding: 60px 20px;
   animation: fadeIn 1.2s ease;
 }
+
 .title {
-  font-size: 48px;
+  font-size: 3rem;
   letter-spacing: 1px;
   background: linear-gradient(90deg, #ff4df0, #8c52ff);
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  margin-bottom: 10px;
 }
+
 .subtitle {
-  margin-top: 10px;
-  font-size: 18px;
+  font-size: 1.1rem;
   opacity: 0.8;
+  margin-bottom: 30px;
 }
+
 .instagram-btn {
-  margin-top: 30px;
   display: inline-flex;
   align-items: center;
   gap: 10px;
@@ -40,25 +48,28 @@ h1, h2, h3 { font-weight: 700; }
   font-weight: 600;
   text-decoration: none;
   color: white;
-  transition: 0.3s;
+  transition: all 0.3s;
 }
-.instagram-btn:hover { transform: scale(1.05); filter: brightness(1.15); }
+
+.instagram-btn:hover { 
+  transform: scale(1.05); 
+  filter: brightness(1.15); 
+}
 
 /* ==== PRODUCT GRID ==== */
 .section-title {
-  margin-top: 40px;
   text-align: center;
-  font-size: 30px;
+  font-size: 2rem;
+  margin: 20px 0 40px;
 }
 
 .grid {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 25px;
-  padding: 40px 20px;
-  max-width: 1000px;
-  margin: auto;
+  padding: 0 20px 40px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .card {
@@ -69,18 +80,32 @@ h1, h2, h3 { font-weight: 700; }
   text-align: center;
   border: 1px solid rgba(255,255,255,0.1);
   cursor: pointer;
-  transition: 0.3s;
-  width: 230px;
-  margin: 10px;
+  transition: all 0.3s;
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .card:hover {
   transform: translateY(-7px);
   box-shadow: 0 0 18px #a855ff80;
 }
+
 .icon {
-  font-size: 36px;
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+}
+
+.card h3 {
+  font-size: 1.3rem;
   margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 0.95rem;
+  opacity: 0.8;
 }
 
 /* ==== MODAL STYLES ==== */
@@ -96,21 +121,33 @@ h1, h2, h3 { font-weight: 700; }
   justify-content: center;
   align-items: center;
   animation: fadeIn 0.3s ease;
+  padding: 20px;
+  cursor: pointer;
+}
+
+.modal-wrapper {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .modal-content {
   background: linear-gradient(135deg, #2c3e50 0%, #4a6491 100%);
   border-radius: 20px;
-  width: 90%;
+  width: 100%;
   max-width: 500px;
-  max-height: 80vh;
+  max-height: 90vh;
   padding: 30px;
   color: white;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
   position: relative;
   animation: modalSlideIn 0.3s ease;
-  overflow-y: auto;
-  margin: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  cursor: default;
 }
 
 @keyframes modalSlideIn {
@@ -126,28 +163,118 @@ h1, h2, h3 { font-weight: 700; }
   cursor: pointer;
   color: rgba(255, 255, 255, 0.7);
   transition: color 0.2s;
+  z-index: 20; /* Lebih tinggi dari note */
+  background: none;
+  border: none;
 }
 
 .close-btn:hover {
   color: white;
 }
 
+/* ==== MODAL HEADER CENTER ==== */
 .modal-header {
   text-align: center;
   margin-bottom: 25px;
+  padding-right: 0;
 }
 
 .modal-header h2 {
-  font-size: 28px;
+  font-size: 1.8rem;
   margin-bottom: 10px;
   color: #ff4df0;
+  text-align: center;
+  width: 100%;
 }
 
 .modal-header p {
-  font-size: 16px;
+  font-size: 1rem;
   opacity: 0.8;
+  text-align: center;
+  width: 100%;
 }
 
+/* ==== TABS CENTER ==== */
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+/* ==== SECTION HEADER CENTER ==== */
+.section-header {
+  margin-bottom: 20px;
+  text-align: center; /* Tambah ini */
+}
+
+.section-header h3 {
+  font-size: 1.3rem;
+  color: #ff914d;
+  margin-bottom: 5px;
+  text-align: center; /* Tambah ini */
+}
+
+.section-header p {
+  font-size: 0.95rem;
+  opacity: 0.8;
+  text-align: center; /* Tambah ini */
+}
+
+/* ==== TABS STYLES ==== */
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-bottom: 20px;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.tab-button {
+  padding: 10px 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  font-weight: 600;
+  color: white;
+  transition: all 0.3s;
+  min-width: 120px;
+  font-family: 'Poppins', sans-serif;
+}
+
+.tab-button.active {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+}
+
+.tab-button:hover:not(.active) {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* ==== CONTENT WRAPPERS ==== */
+.tab-content-wrapper,
+.section-content-wrapper {
+  flex: 1; /* Ambil sisa space */
+  overflow-y: auto; /* Scrollable content */
+  margin-bottom: 10px;
+  padding-right: 5px;
+}
+
+.tab-content {
+  display: none;
+  animation: fadeIn 0.3s ease;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+/* ==== PRICE LIST STYLES ==== */
 .price-list {
   display: flex;
   flex-direction: column;
@@ -170,56 +297,42 @@ h1, h2, h3 { font-weight: 700; }
 
 .plan-details {
   text-align: left;
+  flex: 1;
 }
 
 .plan-name {
   font-weight: 600;
-  font-size: 16px;
+  font-size: 1rem;
   margin-bottom: 5px;
 }
 
-.plan-type {
-  font-size: 14px;
+.plan-type, .plan-desc {
+  font-size: 0.9rem;
   opacity: 0.8;
+}
+
+.plan-desc {
+  color: #aaa;
+  margin-top: 3px;
 }
 
 .price {
   font-weight: 700;
-  font-size: 18px;
+  font-size: 1.1rem;
   color: #4cd964;
+  min-width: 120px;
+  text-align: right;
 }
 
-.action-btn {
-  display: block;
-  width: 100%;
-  padding: 14px;
-  margin-top: 25px;
-  background: linear-gradient(45deg, #ff4df0, #8c52ff);
-  color: white;
-  border: none;
-  border-radius: 10px;
-  font-size: 16px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.action-btn:hover {
-  transform: scale(1.02);
-  filter: brightness(1.1);
-}
-
-.note {
-  text-align: center;
-  margin-top: 15px;
-  font-size: 14px;
-  opacity: 0.7;
-}
-
+/* ==== SERVICE SECTION STYLES ==== */
 .service-section {
   margin-bottom: 30px;
   padding-bottom: 20px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.service-section.first-section {
+  border-top: none;
 }
 
 .service-section:last-child {
@@ -227,86 +340,197 @@ h1, h2, h3 { font-weight: 700; }
   margin-bottom: 0;
 }
 
-.modal-content::-webkit-scrollbar {
+.section-header {
+  margin-bottom: 20px;
+}
+
+.section-header h3 {
+  font-size: 1.3rem;
+  color: #ff914d;
+  margin-bottom: 5px;
+}
+
+.section-header p {
+  font-size: 0.95rem;
+  opacity: 0.8;
+}
+
+/* ==== STICKY NOTE STYLES ==== */
+.note-sticky-container {
+  flex-shrink: 0; /* Jangan shrink */
+  margin-top: auto; /* Push ke bawah */
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  background: solid(135deg, #2c3e50 0%, #4a6491 100%);
+  padding-top: 10px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.note-sticky {
+  background: rgba(0, 0, 0, 0.4);
+  backdrop-filter: blur(10px);
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  font-weight: 600;
+  font-size: 0.9rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  animation: fadeIn 0.3s ease;
+}
+
+/* ==== FOOTER ==== */
+.footer {
+  text-align: center;
+  padding: 25px;
+  margin-top: 40px;
+  background: rgba(0, 0, 0, 0.4);
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 0.9rem;
+}
+
+/* ==== RESPONSIVE DESIGN ==== */
+@media (max-width: 768px) {
+  .title {
+    font-size: 2.2rem;
+  }
+  
+  .section-title {
+    font-size: 1.7rem;
+  }
+  
+  .grid {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+    padding: 0 15px 30px;
+  }
+  
+  .card {
+    padding: 20px;
+    min-height: 160px;
+  }
+  
+  .icon {
+    font-size: 2rem;
+  }
+  
+  .modal {
+    padding: 10px;
+  }
+  
+  .modal-content {
+    padding: 20px;
+    max-height: 95vh;
+    max-width: 95%;
+  }
+  
+  .modal-header h2 {
+    font-size: 1.5rem;
+  }
+  
+  .tabs {
+    flex-direction: column;
+  }
+  
+  .tab-button {
+    width: 100%;
+    text-align: center;
+    padding: 12px;
+  }
+  
+  .price-item {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+    padding: 20px;
+  }
+  
+  .plan-details {
+    text-align: center;
+  }
+  
+  .price {
+    text-align: center;
+    min-width: auto;
+    font-size: 1.3rem;
+  }
+  
+  .note-sticky {
+    padding: 12px;
+    font-size: 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .hero {
+    padding: 40px 15px;
+  }
+  
+  .title {
+    font-size: 1.8rem;
+  }
+  
+  .section-title {
+    font-size: 1.5rem;
+  }
+}
+
+/* ==== ANIMATIONS ==== */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+/* Custom scrollbar untuk modal */
+.tab-content-wrapper::-webkit-scrollbar,
+.section-content-wrapper::-webkit-scrollbar {
   width: 6px;
 }
 
-.modal-content::-webkit-scrollbar-track {
+.tab-content-wrapper::-webkit-scrollbar-track,
+.section-content-wrapper::-webkit-scrollbar-track {
   background: rgba(255, 255, 255, 0.1);
   border-radius: 3px;
 }
 
-.modal-content::-webkit-scrollbar-thumb {
+.tab-content-wrapper::-webkit-scrollbar-thumb,
+.section-content-wrapper::-webkit-scrollbar-thumb {
   background: #ff4df0;
   border-radius: 3px;
 }
 
-.service-section:first-child {
-  border-top: none !important;
-}
-
-.note {
-  position: sticky;
-  bottom: 0;
-  background: rgb(0, 0, 0);
-  backdrop-filter: blur(10px);
-  padding: 15px;
-  margin-top: 20px;
+/* ==== TAB SUBTITLE STYLES ==== */
+.tab-subtitle {
+  text-align: center;
+  margin: 0 0 20px 0;
+  padding: 10px 15px;
+  background: rgba(255, 255, 255, 0.05);
   border-radius: 10px;
-  text-align: center;
-  font-weight: 600;
+  border-left: 3px solid #ff914d;
 }
 
-/* Tabs Styles */
-.tabs {
-    display: flex;
-    margin-bottom: 20px;
-    border-bottom: 2px solid #eee;
+.tab-subtitle p {
+  font-size: 0.95rem;
+  opacity: 0.9;
+  font-weight: 500;
+  color: #ff914d;
+  margin: 0;
 }
 
-.tab-button {
-    padding: 10px 20px;
-    background: none;
-    border: none;
-    cursor: pointer;
-    font-size: 16px;
-    font-weight: bold;
-    color: #666;
-    border-bottom: 3px solid transparent;
-    transition: all 0.3s ease;
-}
-
-.tab-button.active {
-    color: #25D366;
-    border-bottom-color: #25D366;
-}
-
-.tab-button:hover {
-    color: #128C7E;
-}
-
-.tab-content {
-    display: none;
-}
-
-.tab-content.active {
-    display: block;
-}
-
-/* ==== FOOTER ==== */
-footer {
-  text-align: center;
-  padding: 25px;
-  margin-top: 60px;
-  background: rgba(0, 0, 0, 0.4);
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-  opacity: 1;
-  font-size: 14px;
-  position: relative;
-  z-index: 1;
-}
-
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px); }
-  to { opacity: 1; transform: translateY(0); }
+/* Responsive */
+@media (max-width: 768px) {
+  .tab-subtitle {
+    margin: 0 0 15px 0;
+    padding: 8px 12px;
+  }
+  
+  .tab-subtitle p {
+    font-size: 0.9rem;
+  }
 }
